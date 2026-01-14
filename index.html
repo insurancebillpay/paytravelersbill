@@ -45,23 +45,38 @@ li{margin:6px 0}
 }
 .small{font-size:14px;color:#4b5563}
 
-/* floating text (not clickable) */
+<style>
+/* STEP 1 – Floating billing CTA (already done by you) */
 .floating-info{
   position:fixed;
-  bottom:16px;
-  right:16px;
+  bottom:80px;
+  left:50%;
+  transform:translateX(-50%);
   background:#0f2a44;
   color:#fff;
-  padding:12px 18px;
-  border-radius:14px;
-  font-size:14px;
-  box-shadow:0 6px 18px rgba(0,0,0,.2);
-  z-index:999;
+  padding:10px 14px;
+  border-radius:12px;
+  font-size:13px;
+  box-shadow:0 4px 14px rgba(0,0,0,.2);
+  z-index:997;
+  max-width:90%;
+  text-align:center;
 }
-  /* Mobile fix: prevent overlap with Tawk chat */
+
+/* STEP 2 – Lock Tawk chat bottom-right */
+iframe[src*="tawk.to"]{
+  right:16px !important;
+  left:auto !important;
+  bottom:16px !important;
+  z-index:998 !important;
+}
+
+/* STEP 3 – Mobile spacing fine-tuning */
 @media (max-width: 768px){
   .floating-info{
-    bottom: 90px !important;
+    bottom:110px !important;
+    font-size:12.5px;
+    padding:9px 12px;
   }
 }
 </style>
