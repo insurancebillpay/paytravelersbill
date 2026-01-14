@@ -58,6 +58,12 @@ li{margin:6px 0}
   box-shadow:0 6px 18px rgba(0,0,0,.2);
   z-index:999;
 }
+  /* Mobile fix: prevent overlap with Tawk chat */
+@media (max-width: 768px){
+  .floating-info{
+    bottom: 90px !important;
+  }
+}
 </style>
 
 <!-- FAQ Schema – BILL PAY ONLY -->
