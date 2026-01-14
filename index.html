@@ -29,23 +29,33 @@ li{margin:6px 0}
 
 .small{font-size:14px;color:#4b5563}
 
-/* Floating billing CTA – bottom LEFT */
+/* ===== Floating Billing CTA ===== */
 .floating-info{
   position:fixed;
-  bottom:80px;            /* Tawk se upar rahe */
-  left:16px;              /* LEFT corner */
-  right:auto;
-  transform:none;         /* center wala transform remove */
-  background:#0f2a44;
-  color:#fff;
-  padding:10px 14px;
-  border-radius:12px;
+  bottom:88px;              /* Tawk chat ke upar */
+  right:16px;               /* bottom-right corner */
+  left:auto;
+  transform:none;
+  background:#0f2a44;       /* same color, no design change */
+  color:#ffffff;
+  padding:10px 14px;        /* small size */
+  border-radius:22px;       /* soft pill shape */
   font-size:13px;
-  box-shadow:0 4px 14px rgba(0,0,0,.2);
+  line-height:1.25;
+  box-shadow:0 4px 14px rgba(0,0,0,.22);
   z-index:997;
-  max-width:85%;
-  text-align:left;
+  max-width:90%;
+  white-space:nowrap;
+}
+
+/* Mobile spacing fix */
+@media (max-width: 768px){
+  .floating-info{
+    bottom:110px !important; /* mobile pe aur upar */
+    font-size:12.5px;
+    padding:9px 12px;
   }
+                             }
 
 /* Lock Tawk chat bottom-right */
 iframe[src*="tawk.to"]{
